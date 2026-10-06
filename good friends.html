@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Good Friends – Accessible Reading Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #ffd54f;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: #000;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      left: 0.5rem;
+      top: 0.5rem;
+    }
+
+    header, main, footer {
+      padding: 1rem;
+    }
+
+    header {
+      background-color: #222;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      background-color: #111;
+      border: 1px solid #444;
+      font-size: 1.2rem;
+    }
+
+    button.read-btn {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.4rem;
+      border: none;
+      background-color: #ffd54f;
+      color: #000;
+    }
+
+    button.read-btn:focus {
+      outline: 3px solid #fff;
+      outline-offset: 2px;
+    }
+
+    #live-region {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
+    <h1>Good Friends – Reading Practice</h1>
+    <p>Sentences about good friends. Screen readers and speech can read each sentence.</p>
+  </header>
+
+  <main id="main-content" role="main" aria-label="Sentences about good friends">
+    <!-- ARIA live region for sentence reading -->
+    <div id="live-region" aria-live="polite" aria-atomic="true"></div>
+
+    <section aria-labelledby="section-1-heading">
+      <h2 id="section-1-heading" class="section-title">A good friend</h2>
+      <ul>
+        <li>
+          A good friend is nice.
+          <button class="read-btn" aria-label="Read: A good friend is nice." data-text="A good friend is nice.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend helps me.
+          <button class="read-btn" aria-label="Read: A good friend helps me." data-text="A good friend helps me.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend listens to me.
+          <button class="read-btn" aria-label="Read: A good friend listens to me." data-text="A good friend listens to me.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend is fun.
+          <button class="read-btn" aria-label="Read: A good friend is fun." data-text="A good friend is fun.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend shares with me.
+          <button class="read-btn" aria-label="Read: A good friend shares with me." data-text="A good friend shares with me.">
+            Read sentence
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="section-2-heading">
+      <h2 id="section-2-heading" class="section-title">Good friends</h2>
+      <ul>
+        <li>
+          Good friends help.
+          <button class="read-btn" aria-label="Read: Good friends help." data-text="Good friends help.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends listen.
+          <button class="read-btn" aria-label="Read: Good friends listen." data-text="Good friends listen.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends share.
+          <button class="read-btn" aria-label="Read: Good friends share." data-text="Good friends share.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends are generous.
+          <button class="read-btn" aria-label="Read: Good friends are generous." data-text="Good friends are generous.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends care.
+          <button class="read-btn" aria-label="Read: Good friends care." data-text="Good friends care.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends are fun.
+          <button class="read-btn" aria-label="Read: Good friends are fun." data-text="Good friends are fun.">
+            Read sentence
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="section-3-heading">
+      <h2 id="section-3-heading" class="section-title">More about good friends</h2>
+      <ul>
+        <li>
+          Good friends are honest.
+          <button class="read-btn" aria-label="Read: Good friends are honest." data-text="Good friends are honest.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends share.
+          <button class="read-btn" aria-label="Read: Good friends share." data-text="Good friends share.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends help.
+          <button class="read-btn" aria-label="Read: Good friends help." data-text="Good friends help.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends like the same things.
+          <button class="read-btn" aria-label="Read: Good friends like the same things." data-text="Good friends like the same things.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends have hobbies.
+          <button class="read-btn" aria-label="Read: Good friends have hobbies." data-text="Good friends have hobbies.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends give advice.
+          <button class="read-btn" aria-label="Read: Good friends give advice." data-text="Good friends give advice.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends are smart.
+          <button class="read-btn" aria-label="Read: Good friends are smart." data-text="Good friends are smart.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends can be trusted.
+          <button class="read-btn" aria-label="Read: Good friends can be trusted." data-text="Good friends can be trusted.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          Good friends listen.
+          <button class="read-btn" aria-label="Read: Good friends listen." data-text="Good friends listen.">
+            Read sentence
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="section-4-heading">
+      <h2 id="section-4-heading" class="section-title">A good friend (more ideas)</h2>
+      <ul>
+        <li>
+          A good friend is fun.
+          <button class="read-btn" aria-label="Read: A good friend is fun." data-text="A good friend is fun.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend tells the truth.
+          <button class="read-btn" aria-label="Read: A good friend tells the truth." data-text="A good friend tells the truth.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend gives.
+          <button class="read-btn" aria-label="Read: A good friend gives." data-text="A good friend gives.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend helps.
+          <button class="read-btn" aria-label="Read: A good friend helps." data-text="A good friend helps.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend likes the same things.
+          <button class="read-btn" aria-label="Read: A good friend likes the same things." data-text="A good friend likes the same things.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend has hobbies.
+          <button class="read-btn" aria-label="Read: A good friend has hobbies." data-text="A good friend has hobbies.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend gives ideas.
+          <button class="read-btn" aria-label="Read: A good friend gives ideas." data-text="A good friend gives ideas.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend is smart.
+          <button class="read-btn" aria-label="Read: A good friend is smart." data-text="A good friend is smart.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend is safe.
+          <button class="read-btn" aria-label="Read: A good friend is safe." data-text="A good friend is safe.">
+            Read sentence
+          </button>
+        </li>
+        <li>
+          A good friend listens.
+          <button class="read-btn" aria-label="Read: A good friend listens." data-text="A good friend listens.">
+            Read sentence
+          </button>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Practice reading and listening. Talk about what makes a good friend.</p>
+    <p>Created by Eltayeb Mohamed – King Saud University</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.read-btn');
+    const liveRegion = document.getElementById('live-region');
+
+    function speak(text) {
+      if (!('speechSynthesis' in window)) {
+        // Fallback: only update live region
+        liveRegion.textContent = text;
+        return;
+      }
+      // Stop any current speech
+      window.speechSynthesis.cancel();
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US'; // change if needed
+      window.speechSynthesis.speak(utterance);
+
+      // Also update ARIA live region for screen readers
+      liveRegion.textContent = text;
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.getAttribute('data-text');
+        speak(text);
+      });
+    });
+  </script>
+</body>
+</html>
